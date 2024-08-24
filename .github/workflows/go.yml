@@ -1,20 +1,19 @@
-name: Go
-
+name: Build Docker Image
 on:
   push:
-    branches: [ "main" ]
-
-
+    branches:
+      - main
 jobs:
   build:
+    name: push docker image to docker hub
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Go
-        uses: actions/setup-go@v4
-        with:
-          go-version: '1.21.5'
-
-      - name: Build
-        run: go build -v ./...
+      - uses: actions/checkout@v2
+      - name: build the docker image
+        id: build-docker-image
+        run: |
+          ls -la 
+          docker build . -f Dockerfile -t gjj.yulinmei.cn:10443/demo-image-test:latest
+      - name: push the docker image
+        id: push-docker-image
+        run: docker push gjj.yulinmei.cn:10443/demo-image-test:latest
