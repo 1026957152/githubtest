@@ -16,4 +16,4 @@ jobs:
           docker build . -f Dockerfile -t gjj.yulinmei.cn:10443/demo-image-test:latest
       - name: push the docker image
         id: push-docker-image
-        run: docker push gjj.yulinmei.cn:10443/demo-image-test:latest
+        run: docker push livekit.yulinmei.cn:10443/demo-image-test:latest
