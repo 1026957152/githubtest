@@ -1,0 +1,21 @@
+docker build . -t my-golang-app-image
+
+
+docker tag my-golang-app-image gjj.yulinmei.cn:10443/my-golang-app-image
+
+或者直接
+docker push gjj.yulinmei.cn:10443/my-golang-app-image
+
+
+
+
+
+
+curl http://10.22.1.176:5000/v2/_catalog
+
+
+curl http://10.22.1.176:5000/v2/_catalog
+
+curl -v  https://gjj.yulinmei.cn:10443/v2/_catalog
+
+docker pull gjj.yulinmei.cn:10443/my-golang-app-image
