@@ -15,14 +15,14 @@ spec:
     spec:
       containers:
         - name: hello-world
-          image: bashofmann/rancher-demo:1.0.0
+          image: livekit.yulinmei.cn:10443/demo-image-test:latest
           imagePullPolicy: Always
           resources:
             requests:
               memory: "12Mi"
               cpu: "2m"
           ports:
-            - containerPort: 8080
+            - containerPort: 80
               name: web
               protocol: TCP
           env:

@@ -31,9 +31,10 @@ jobs:
       - name: Creating a Pod
         run: |
           kubectl apply -f .github/hello-world-pod.yaml
-      #      - name: Deploying the Application
-      #        run: |
-      #          kubectl apply -f .github/hello-world-deployment.yaml
+
+      - name: Deploying the Application
+        run: |
+          kubectl apply -f .github/hello-world-deployment.yaml
       #
       #      - name: Service
       #        run: |
