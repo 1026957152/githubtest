@@ -56,5 +56,14 @@ jobs:
 #        run: |
 #          kubectl expose deployment hello-world --type=LoadBalancer --name=hello-world-service-loadbalancing --port=8080 --target-port=8080 -n demo
 #
+      - name: Deploying a Horizontal Pod Autoscaler (HPA)
+        run: |
+          kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
-
+      - name: Deploy HPA for the hello-world Deployment
+        run: |
+          kubectl apply -f .github/hello-world-hpa.yaml
+          
+#      - name: Run a Load Generator Pod
+#        run: |
+#          kubectl apply -f .github/load-generator.yaml
