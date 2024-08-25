@@ -5,4 +5,4 @@ name: hello-world
 spec:
 containers:
   - name: hello
-  image: busybox  # Replace with your desired Docker image
+    image: busybox  # Replace with your desired Docker image
