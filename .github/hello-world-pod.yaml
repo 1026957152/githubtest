@@ -1,8 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: hello-world
+  name: hello-pod
+  labels:
+    app.kubernetes.io/name: hello
 spec:
   containers:
-  - name: hello
-    image: busybox  # Replace with your desired Docker image
+    - name: hello-container
+      image: busybox
+      command: ['sh', '-c', 'echo Hello from my container! && sleep 3600']
