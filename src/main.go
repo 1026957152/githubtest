@@ -42,6 +42,10 @@ type Annotations struct {
 	Summary     string `json:"summary"`
 }
 
+func rootHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("Server is running"))
+}
 func alertHandler(w http.ResponseWriter, r *http.Request) {
 	// 读取请求体
 	body, err := ioutil.ReadAll(r.Body)

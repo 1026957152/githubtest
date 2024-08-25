@@ -1,3 +1,5 @@
+#https://learncloudnative.com/blog/2021-07-10-pods-replicasets
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
