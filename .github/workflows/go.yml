@@ -46,15 +46,15 @@ jobs:
 
       - name: Create a service of type LoadBalancer
         run: |
-          kubectl apply -f .github/hello-world-service.yaml
+          kubectl apply -f .github/hello-world-service-loadbalancing.yaml
 
 #      - name: Exposing the Application
 #        run: |
 #          kubectl expose deployment hello-world --type=ClusterIP --name=hello-world-service --port=8080 --target-port=8080 -n demo
 
-      - name: Create a service of type LoadBalancer
-        run: |
-          kubectl expose deployment hello-world --type=LoadBalancer --name=hello-world-service-loadbalancing --port=8080 --target-port=8080 -n demo
-
+#      - name: Create a service of type LoadBalancer
+#        run: |
+#          kubectl expose deployment hello-world --type=LoadBalancer --name=hello-world-service-loadbalancing --port=8080 --target-port=8080 -n demo
+#
 
 
