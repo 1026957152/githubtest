@@ -4,7 +4,8 @@ docker build . -t my-golang-app-image
 docker tag my-golang-app-image gjj.yulinmei.cn:10443/my-golang-app-image
 
 或者直接
-docker push gjj.yulinmei.cn:10443/my-golang-app-image
+docker build . -t livekit.yulinmei.cn:10443/demo-image-test:latest
+
 
 
 

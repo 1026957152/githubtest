@@ -63,12 +63,12 @@ func alertHandler(w http.ResponseWriter, r *http.Request) {
 
 	// 处理解析后的数据
 	for _, alert := range webhook.Alerts {
-		fmt.Printf("Alert: %s\n", alert.Labels.AlertName)
-		fmt.Printf("Instance: %s\n", alert.Labels.Instance)
-		fmt.Printf("Severity: %s\n", alert.Labels.Severity)
-		fmt.Printf("Summary: %s\n", alert.Annotations.Summary)
-		fmt.Printf("Description: %s\n", alert.Annotations.Description)
-		fmt.Printf("Status: %s\n", webhook.Status)
+		fmt.Printf("Alerddt: %s\n", alert.Labels.AlertName)
+		fmt.Printf("Insdtance: %s\n", alert.Labels.Instance)
+		fmt.Printf("Sevderity: %s\n", alert.Labels.Severity)
+		fmt.Printf("Sumdmary: %s\n", alert.Annotations.Summary)
+		fmt.Printf("Desdcription: %s\n", alert.Annotations.Description)
+		fmt.Printf("Stadtus: %s\n", webhook.Status)
 	}
 
 	// 返回成功响应
