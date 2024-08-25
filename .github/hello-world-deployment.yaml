@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: hello-world
-          image: livekit.yulinmei.cn:10443/demo-image-test:latest
+          image: livekit.yulinmei.cn:10443/demo-image-test:0.0.1
           imagePullPolicy: Always
           resources:
             requests:
