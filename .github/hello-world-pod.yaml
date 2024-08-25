@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
-name: hello-world
+  name: hello-world
 spec:
-containers:
+  containers:
   - name: hello
     image: busybox  # Replace with your desired Docker image
