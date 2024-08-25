@@ -68,22 +68,22 @@ func alertHandler(w http.ResponseWriter, r *http.Request) {
 	// 处理解析后的数据
 	for _, alert := range webhook.Alerts {
 		fmt.Printf("Alerddt: %s\n", alert.Labels.AlertName)
-		fmt.Printf("Insdtance: %s\n", alert.Labels.Instance)
-		fmt.Printf("Sevderity: %s\n", alert.Labels.Severity)
-		fmt.Printf("Sumdmary: %s\n", alert.Annotations.Summary)
-		fmt.Printf("Desdcription: %s\n", alert.Annotations.Description)
-		fmt.Printf("Stadtus: %s\n", webhook.Status)
+		fmt.Printf("Insccdtance: %s\n", alert.Labels.Instance)
+		fmt.Printf("Sevccderity: %s\n", alert.Labels.Severity)
+		fmt.Printf("Sumccdmary: %s\n", alert.Annotations.Summary)
+		fmt.Printf("Desccdcription: %s\n", alert.Annotations.Description)
+		fmt.Printf("Staccdtus: %s\n", webhook.Status)
 	}
 
 	// 返回成功响应
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write([]byte(`{"message": "Alert received"}`))
+	w.Write([]byte(`{"message": "Alssssert received"}`))
 }
 
 func main() {
 	http.HandleFunc("/alert", alertHandler)
 	http.HandleFunc("/", rootHandler)
-	log.Println("Starting server on :80")
-	log.Fatal(http.ListenAndServe(":80", nil))
+	log.Println("55555ffff555555Starting server on :18080")
+	log.Fatal(http.ListenAndServe(":18080", nil))
 }
