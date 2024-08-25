@@ -83,6 +83,7 @@ func alertHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/alert", alertHandler)
+	http.HandleFunc("/", rootHandler)
 	log.Println("Starting server on :80")
 	log.Fatal(http.ListenAndServe(":80", nil))
 }
