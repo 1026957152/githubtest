@@ -18,10 +18,15 @@ jobs:
         id: push-docker-image
         run: docker push livekit.yulinmei.cn:10443/demo-image-test:latest
 
-      - name: Set up Kubectl
-        run: |
-          mkdir ${HOME}/.kube
-          echo ${{ secrets.KUBECONFIG }} | base64 --decode > ${HOME}/.kube/config
+#      - name: Set up Kubectl
+#        run: |
+#          mkdir ${HOME}/.kube
+#          echo ${{ secrets.KUBECONFIG }} | base64 --decode > ${HOME}/.kube/config
+      - name: Set Kubernetes Context
+        uses: azure/k8s-set-context@v1
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets.KUBE_CONFIG }} # Use secret (https://developer.github.com/actions/managing-workflows/storing-secrets/)
 
       - name: Creating a Pod
         run: |
